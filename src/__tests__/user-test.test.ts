@@ -1,5 +1,6 @@
 //aqui, informamos jest para usar nossa simulação manual,  it espera que o valor de retorno seja uma promessa que vai ser resolvida.
-jest.mock("../request");
+//Simula um módulo com uma versão auto simulada quando ele está sendo "required".
+jest.mock<typeof import("../__mocks__/request")>("../request");
 
 import * as user from "../user";
 
