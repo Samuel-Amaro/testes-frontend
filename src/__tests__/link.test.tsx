@@ -9,6 +9,8 @@ import Link from "../components/Link";
  * Testes de snapshot são ferramentas bem úteis sempre que você desejar garantir que sua UI não seja alterada inesperadamente.
  *
  * Um caso comum de teste de snapshot é renderizar um componente de UI, obter uma captura disso, então compará-lo para com uma imagem de referência armazenada com o teste. O teste irá falhar se as duas imagens não coincidirem: quer a mudança seja inesperada, ou a captura de tela precisa ser atualizada para a nova versão do componente da UI.
+ * 
+ * Então, essencialmente, o teste de snapshot permite você ver como seu componente se alterou desde o último teste, linha por linha. As linhas de código que sofreram mudanças são conhecidas como diff, abreviação em inglês para diferenças.
  */
 
 //expect -> permite verificar se os valores atendem a certas condições, expect lhe dá acesso a inúmeros matchers que permite validar diferentes coisas
