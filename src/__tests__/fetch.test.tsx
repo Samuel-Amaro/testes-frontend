@@ -15,6 +15,7 @@
 import { rest } from "msw";
 import { setupServer } from "msw/node";
 
+//A biblioteca userEvent simula as interações do usuário despachando os eventos que aconteceriam se a interação ocorresse em um navegador.
 import userEvent from "@testing-library/user-event";
 
 //importa react-testing metodos
@@ -64,14 +65,13 @@ test("carrega e exibe saudacao", async () => {
   //o fire event método permite disparar eventtos para simular ações do usuário
   //aqui dispara um evento do clique em um elemento que contenha o text
   //fireEvent.click(screen.getByText("Carregar Saudação"));
-
   await userEvent.click(screen.getByText("Carregar Saudação"));
 
   //act
   // espera até que a promessa `get` resolva e
   // o componente chama setState e renderiza novamente,
   // lançando um erro se não conseguir encontrar um elemento
-  await screen.findByRole("heading", { name: "Olá, aqui" });
+  await screen.findByRole("heading", { name: "Olá aqui" });
 
   //assert - testamos o valor
   // afirma que a mensagem de alerta está correta usando

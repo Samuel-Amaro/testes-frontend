@@ -1,5 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useReducer, useState } from "react";
+//Um polyfill JavaScript window.fetch.
+//A fetch()função é um mecanismo baseado em promessa para fazer solicitações da Web programaticamente no navegador. Este projeto é um polyfill que implementa um subconjunto da especificação Fetch padrão , o suficiente para tornar fetchuma substituição viável para a maioria dos usos de XMLHttpRequest em aplicativos da Web tradicionais.
+//está dependencia e para que react-testing-library entenda que fetch exista
 import "whatwg-fetch";
 
 const initialState: ResponseData = {
